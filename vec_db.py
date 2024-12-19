@@ -273,11 +273,11 @@ class VecDB:
                 reverse=True,
             )
             MAX_CLUSTERS = 100
-            if self.ClustersNum ==  9488:
+            if self.ClustersNum ==  9489:
                 MAX_CLUSTERS = 90
-            elif self.ClustersNum == 11619:
+            elif self.ClustersNum == 11620:
                 MAX_CLUSTERS = 95
-            elif self.ClustersNum == 13419:
+            elif self.ClustersNum == 13420:
                 MAX_CLUSTERS = 95
             print("clusters", self.ClustersNum)
             print("MAX_CLUSTERS", MAX_CLUSTERS)
