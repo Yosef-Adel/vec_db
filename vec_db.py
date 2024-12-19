@@ -281,6 +281,7 @@ class VecDB:
                 MAX_CLUSTERS = 60
 
             print("MAX_CLUSTERS", MAX_CLUSTERS)
+            print("self.ClustersNum", self.ClustersNum)
 
             top_m_clusters = [open(f"./{self.db_path}/cluster_{i}", "r") for _, i in scores[:(min(int(self.ClustersNum*.06+1), MAX_CLUSTERS))]]
             data = []
