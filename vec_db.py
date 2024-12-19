@@ -274,7 +274,7 @@ class VecDB:
             )
             MAX_CLUSTERS = 100
             if self.ClustersNum ==  9489:
-                MAX_CLUSTERS = 90
+                MAX_CLUSTERS = 85
             elif self.ClustersNum == 11620:
                 MAX_CLUSTERS = 95
             elif self.ClustersNum == 13420:
