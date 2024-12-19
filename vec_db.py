@@ -273,7 +273,7 @@ class VecDB:
                 reverse=True,
             )
 
-            top_m_clusters = [open(f"./{self.db_path}/cluster_{i}", "r") for _, i in scores[:(min(int(self.ClustersNum*.06+1), 100))]]
+            top_m_clusters = [open(f"./{self.db_path}/cluster_{i}", "r") for _, i in scores[:(min(int(self.ClustersNum*.06+1), 80))]]
             data = []
             for f in top_m_clusters:
                 data.extend(
