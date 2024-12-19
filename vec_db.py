@@ -273,15 +273,12 @@ class VecDB:
                 reverse=True,
             )
             MAX_CLUSTERS = 100
-            if self.ClustersNum ==  10**7:
+            if self.ClustersNum >  5000:
+                MAX_CLUSTERS = 90
+            elif self.ClustersNum > 10000:
                 MAX_CLUSTERS = 80
-            elif self.ClustersNum == int(1.5*10**7):
+            elif self.ClustersNum == 12000:
                 MAX_CLUSTERS = 70
-            elif self.ClustersNum == int(2*10**7):
-                MAX_CLUSTERS = 60
-
-            print("MAX_CLUSTERS", MAX_CLUSTERS)
-            print("self.ClustersNum", self.ClustersNum)
 
             top_m_clusters = [open(f"./{self.db_path}/cluster_{i}", "r") for _, i in scores[:(min(int(self.ClustersNum*.06+1), MAX_CLUSTERS))]]
             data = []
